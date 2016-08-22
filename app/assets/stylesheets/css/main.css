@@ -34,6 +34,8 @@
 **bootstrap overrides
 */
 /*breadcrumbs*/
+
+
 .breadcrumb {
   margin: 5px 0;
   padding: 0;
@@ -399,7 +401,7 @@ p + .progress {
 .tab-content {
   border-radius: 0 0 0 0;
   padding: 20px 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
 }
 .tab-content.no-border {
   padding: 0;
@@ -418,16 +420,17 @@ p + .progress {
   padding: 9px 24px;
   margin-right: 2px;
   margin-top: 0px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  /*border: 1px solid rgba(0, 0, 0, 0.1);*/
   border-radius: 0;
 }
 
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  border-bottom-color: #ffffff;
+  /* border-bottom-color: #ffffff; */
   background-color: transparent;
-  color: #323232;
+  border-bottom: 2px solid #db2450;
+  color: #db2450;
 }
 
 /*bs buttons*/
@@ -1056,10 +1059,11 @@ a > [class*="rt-icon-"],
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   line-height: 1;
-  padding: 13px 30px;
+  padding: 8px 16px;
   margin-top: 2px;
   margin-bottom: 2px;
   display: inline-block;
+  float: right;
   color: #ffffff;
   border: 1px solid #db2450;
   background-color: #db2450;
@@ -1644,10 +1648,10 @@ a > [class*="rt-icon-"],
   background-color: rgba(255, 255, 255, 0.06);
 }
 [class*="dark"] .tab-content, [class*="dark"] .nav-tabs > li > a {
-  border-color: rgba(255, 255, 255, 0.15);
+  /* border-color: rgba(255, 255, 255, 0.15); */
 }
 [class*="dark"] .nav-tabs > li.active > a, [class*="dark"] .nav-tabs > li.active > a:hover, [class*="dark"] .nav-tabs > li.active > a:focus {
-  border-color: rgba(255, 255, 255, 0.15);
+  /* border-color: rgba(255, 255, 255, 0.15); */
   border-bottom-color: transparent;
   background-color: rgba(255, 255, 255, 0.06);
   color: #ffffff;
@@ -3758,7 +3762,7 @@ widget_pages
 
 /* team side item */
 .team-item {
-  border: 1px solid #f2f2f2;
+  /* border: 1px solid #f2f2f2; */
   margin-top: 50%;
 }
 .grey_section .team-item {
@@ -3771,11 +3775,21 @@ widget_pages
   padding: 0 30px;
   text-align: center;
 }
+.team-item-description
+{
+  margin-top: 20px;
+}
 .team-item h3 {
   font-size: 30px;
   margin: 33px 0 0;
 }
-.team-item .team-job {
+.team-item {
+  text-transform: uppercase;
+  margin: -3px 0 10px;
+  font-size: 14px;
+}
+.team-job
+{
   text-transform: uppercase;
   margin: -3px 0 10px;
   font-size: 14px;
@@ -3793,9 +3807,9 @@ widget_pages
 @media (min-width: 1200px) {
   .left-side-item {
     height: 270px;
-    margin-top: 0;
+    margin-top: 70px;
     margin-right: 135px;
-    padding: 0 165px 30px 20px;
+    padding: 0px 165px 30px 20px;
   }
   .left-side-item .team-item-description {
     text-align: right;
@@ -3810,21 +3824,25 @@ widget_pages
   }
 
   .right-side-item {
-    height: 270px;
-    margin-top: 0;
-    margin-left: 135px;
-    padding: 0 20px 30px 165px;
+    width: 75%;
+    height: 210px;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px 0px 0px 165px;
   }
   .right-side-item .team-item-description {
+    width: 75%;
     text-align: left;
-    padding: 0;
+    margin-left: 0px;
+    padding: 0 0 0 0px;
   }
   .right-side-item .team-item-image {
     max-width: 300px;
     float: left;
-    margin-top: 0;
-    margin-left: -300px;
-    padding-right: 30px;
+    margin-top: 5px;
+    margin-right: 20px;
+    padding-right: 0px;
   }
 }
 /*vertical tabs*/
